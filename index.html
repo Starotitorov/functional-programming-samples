@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Blog</title>
+    <style>
+      .post {
+        display: block;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
+  </head>
+  <body>
+    <h1>Posts</h1>
+    <div id="container">
+      Loading...
+    </div>
+    <script id="template" type="text/x-handlebars-template">
+      <section>
+        {{#each posts}}
+          <article id="post-{{id}}"class="post">
+            <h3>{{title}}</h3>
+            <p>{{body}}</p>
+          </article>
+        {{/each}}
+      </section>
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
